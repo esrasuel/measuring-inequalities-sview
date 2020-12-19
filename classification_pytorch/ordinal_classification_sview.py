@@ -105,8 +105,11 @@ aug_prob = args.aug_prob
 rds_path = './{}/'.format(city_name)
 if not os.path.exists(rds_path):
     os.makedirs(rds_path)
+if not os.path.exists(rds_path + 'log_dirs'):
     os.makedirs(rds_path + 'log_dirs')
+if not os.path.exists(rds_path + 'models'): 
     os.makedirs(rds_path + 'models')
+if not os.path.exists(rds_path + 'analysis'): 
     os.makedirs(rds_path + 'analysis')
 part_file = rds_path + part_file
 out_pre = '{}_{}_{}'.format(city_name, outformat, trained_model_name)
